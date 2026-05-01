@@ -24,7 +24,7 @@ Dashboard ini menyediakan analisis utama berikut:
 ├── data/
 ├── BFAD_Auliya_Az_Zahrah_Salsabilah.ipynb
 ├── requirements.txt
-├── link.txt
+├── url.txt
 └── README.md
 
 
