@@ -177,7 +177,7 @@ with st.sidebar:
     st.markdown("""
     <div style='font-size:12px; color:#64748b; line-height:1.8'>
     📊 <b>Dataset:</b> Brazilian E-Commerce<br>
-    📆 <b>Periode:</b> Jan 2017 – Agt 2018<br>
+    📆 <b>Periode:</b> Jan 2016 – Agt 2018<br>
     👩‍💻 <b>Dibuat oleh:</b><br>Auliya Az Zahrah Salsabilah<br>
     <span style='color:#2563eb'>Dicoding 2026 [CDC-31]</span>
     </div>
@@ -196,7 +196,7 @@ st.markdown("""
         📦 E-Commerce Analytics Dashboard
     </h1>
     <p style='color:#64748b; font-size:14px; margin-top:6px'>
-        Analisis performa penjualan · Januari 2017 – Agustus 2018 · Brazilian E-Commerce Public Dataset
+        Analisis performa penjualan · Januari 2016 – Agustus 2018 · Brazilian E-Commerce Public Dataset
     </p>
 </div>
 """, unsafe_allow_html=True)
@@ -236,7 +236,7 @@ tab1, tab2, tab3, tab4, tab5 = st.tabs([
 # tren penjualan 
 with tab1:
     st.markdown('<div class="section-header">Tren Jumlah Order & Revenue per Bulan</div>', unsafe_allow_html=True)
-    st.markdown('<div class="section-sub">Bagaimana tren penjualan dan revenue berkembang sepanjang periode 2017–2018?</div>', unsafe_allow_html=True)
+    st.markdown('<div class="section-sub">Bagaimana tren penjualan dan revenue berkembang sepanjang periode 2016–2018?</div>', unsafe_allow_html=True)
  
     monthly_df = df.resample(rule='ME', on='order_purchase_timestamp').agg({
         "order_id": "nunique",
@@ -302,8 +302,8 @@ with tab1:
  
     st.markdown("""
     <div class="insight-box">
-    📌 <b>Insight:</b> Tren jumlah order dan revenue menunjukkan pertumbuhan yang konsisten dari awal 2017 hingga akhir tahun, 
-    dengan puncak tertinggi terjadi pada <b>November–Desember 2017</b> yang mengindikasikan adanya pengaruh 
+    📌 <b>Insight:</b> Tren jumlah order dan revenue menunjukkan pertumbuhan yang konsisten dari awal 2016 hingga akhir tahun, 
+    dengan puncak tertinggi terjadi pada <b>November–Desember 2016</b> yang mengindikasikan adanya pengaruh 
     faktor musiman (kampanye akhir tahun). Revenue kemudian cenderung stabil pada semester pertama 2018.
     </div>
     """, unsafe_allow_html=True)
@@ -311,7 +311,7 @@ with tab1:
 # Kota dan geografis
 with tab2:
     st.markdown('<div class="section-header">Analisis Geografis — Distribusi Transaksi & Revenue per Kota</div>', unsafe_allow_html=True)
-    st.markdown('<div class="section-sub">Kota mana yang memiliki jumlah transaksi dan revenue tertinggi selama 2017–2018?</div>', unsafe_allow_html=True)
+    st.markdown('<div class="section-sub">Kota mana yang memiliki jumlah transaksi dan revenue tertinggi selama 2016–2018?</div>', unsafe_allow_html=True)
  
     city_df = df.groupby("customer_city").agg(
         total_orders=("order_id", "nunique"),
@@ -373,7 +373,7 @@ with tab2:
         colors_s = [PALETTE[0] if i < 3 else '#bfdbfe' for i in range(len(state_df))]
         ax.bar(state_df['customer_state'], state_df['total_revenue'],
                color=colors_s, edgecolor='none')
-        ax.set_title("Total Revenue per State (2017–2018)", fontsize=13, fontweight='bold', pad=10)
+        ax.set_title("Total Revenue per State (2016–2018)", fontsize=13, fontweight='bold', pad=10)
         ax.set_xlabel("State", fontsize=10)
         ax.set_ylabel("Revenue (BRL)", fontsize=10)
         ax.yaxis.set_major_formatter(mticker.FuncFormatter(lambda x, _: f'R$ {x/1e6:.0f}M'))
