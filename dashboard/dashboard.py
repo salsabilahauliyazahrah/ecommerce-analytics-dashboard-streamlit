@@ -121,7 +121,7 @@ html, body, [class*="css"] {
 .stTabs [data-baseweb="tab-list"] {
     background: #ffffff;
     border-radius: 45px;
-    padding: 5px;
+    padding: cd 
     gap: 100px;
     border: 1px solid #e2e8f0;
             
