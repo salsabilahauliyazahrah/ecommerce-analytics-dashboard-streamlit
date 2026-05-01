@@ -18,14 +18,17 @@ Dashboard ini menyediakan analisis utama berikut:
 ---
 
 ## 📁 Struktur Proyek
+```
+BFAD_Auliya_Az_Zahrah_Salsabilah/
 ├── dashboard/
-│ ├── dashboard.py
-│ └── main_data.csv
+│   ├── dashboard.py
+│   └── main_data.csv
 ├── data/
 ├── BFAD_Auliya_Az_Zahrah_Salsabilah.ipynb
 ├── requirements.txt
 ├── url.txt
 └── README.md
+```
 
 
 ---
@@ -45,7 +48,7 @@ pip install -r requirements.txt
 python -m streamlit run dashboard/dashboard.py
 
 5. Buka di browser:
-link: ecommerce-analytics-dashboard-auliya-cdc31.streamlit.app
+link: [ecommerce-analytics-dashboard-auliya-cdc31.streamlit.app](https://ecommerce-analytics-dashboard-auliya-cdc31.streamlit.app/)
 
 
 ---
@@ -54,6 +57,7 @@ link: ecommerce-analytics-dashboard-auliya-cdc31.streamlit.app
 
 Dataset yang digunakan:
 - Brazilian E-Commerce Public Dataset
+- sumber: https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce   
 
 ---
 
